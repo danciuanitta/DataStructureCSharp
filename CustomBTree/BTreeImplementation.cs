@@ -8,6 +8,8 @@ namespace CustomBTree
         private int CurrentPostorder = 0;
         private int CurrentInorder = 0;
 
+        private Node<int> Root;
+
         public Node<int>? CreateTreeFromList(List<int> bTreeValues)
         {
             if (bTreeValues is null || bTreeValues.Count == 0) 
@@ -23,9 +25,13 @@ namespace CustomBTree
             root.Value = bTreeValues[0];
             bTreeValues.RemoveAt(0);
             CountTotal += 1;
+            if (Root is null)
+                Root = root;
 
             root.LeftTree = CreateTreeFromList(bTreeValues); 
             root.RightTree = CreateTreeFromList(bTreeValues);
+
+
 
             return root;
         }
@@ -102,6 +108,25 @@ namespace CustomBTree
             }
 
             return (DisplayLeaves(root.LeftTree!) + DisplayLeaves(root.RightTree!));
+        }
+
+        public Node<int>? SearchValue(int value)
+        {
+            return SearchValueInNodes(Root, value);
+        }
+
+        private Node<int>? SearchValueInNodes(Node<int> startingNode,int value)
+        {
+            if (startingNode is null)
+                return null;
+
+            if (startingNode.Value == value)
+                return startingNode;
+
+            if (startingNode.LeftTree is null && startingNode.RightTree is null)
+                return null;
+
+            return SearchValueInNodes(startingNode.LeftTree!, value) ?? SearchValueInNodes(startingNode.RightTree!, value);
         }
     }
 }

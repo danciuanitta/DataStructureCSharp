@@ -5,6 +5,7 @@ Console.WriteLine("Hello, World!");
 
 
 #region singleLinkedList
+//Console.ReadLine();
 //CustomSingleLinkedListWithLast<Student> customSingleLinkedListWithLast = new CustomSingleLinkedListWithLast<Student>();
 
 //var specificStudent1 = new Student()
@@ -47,29 +48,58 @@ Console.WriteLine("Hello, World!");
 //customSingleLinkedListWithLast.DisplayNodes();
 
 #endregion
+
+#region BTree
+//Console.ReadLine();
+//var bTreeValues = new List<int>() { 1, 7, 2, 0, 5, 0, 0, 0, 9, 3, 0, 0, 4, 0, 6, 0, 0 };
+
+//var bTree = new BTreeImplementation<int>();
+
+//Node<int>? root = bTree.CreateTreeFromList(bTreeValues);
+
+//if (root == null)
+//{
+//    Console.WriteLine("No tree created.");
+//}
+
+//Console.WriteLine("Display in preorder:");
+//bTree.DisplayInPreorder(root);
+//Console.WriteLine("Display in inorder:");
+//bTree.DisplayInInorder(root);
+//Console.WriteLine("Display in postorder:");
+//bTree.DisplayInPostorder(root);
+
+//var nbOfLeaves = bTree.DisplayLeaves(root);
+//Console.WriteLine($"Total number of leaves: {nbOfLeaves}");
+
+//var nbOfNodes = bTree.DisplayInternalNodes(root);
+//Console.WriteLine($"Total number of nodes: {nbOfNodes}");
+
+//var searchedNode1 = bTree.SearchValue(3);
+
+//if (searchedNode1 is not null)
+//    Console.WriteLine("Value 3 is found");
+//else
+//    Console.WriteLine("Value 3 is not found");
+
+//var searchedNode2 = bTree.SearchValue(300);
+
+//if (searchedNode2 is not null)
+//    Console.WriteLine("Value 300 is found");
+//else
+//    Console.WriteLine("Value 300 is not found");
+#endregion
+
+#region sbt
 Console.ReadLine();
-var bTreeValues = new List<int>() { 1, 7, 2, 0, 5, 0, 0, 0, 9, 3, 0, 0, 4, 0, 6, 0, 0 };
+var sbTreeValues = new List<int>() { 1, 7, 2, 0, 5, 0, 0, 0, 9, 3, 0, 0, 4, 0, 6, 0, 0 };
+var sbTree = new SelfBalancedTree<int>();
 
-var bTree = new BTreeImplementation<int>();
-
-Node<int>? root = bTree.CreateTreeFromList(bTreeValues);
-
-if (root == null)
-{
-    Console.WriteLine("No tree created.");
-}
-
+var sbRoot = sbTree.CreateTreeFromValues(sbTreeValues);
 Console.WriteLine("Display in preorder:");
-bTree.DisplayInPreorder(root);
-Console.WriteLine("Display in inorder:");
-bTree.DisplayInInorder(root);
-Console.WriteLine("Display in postorder:");
-bTree.DisplayInPostorder(root);
+sbTree.DisplayInPreorder(sbRoot);
 
-var nbOfLeaves = bTree.DisplayLeaves(root);
-Console.WriteLine($"Total number of leaves: {nbOfLeaves}");
+sbTree.print2D(sbRoot);
 
-var nbOfNodes = bTree.DisplayInternalNodes(root);
-Console.WriteLine($"Total number of nodes: {nbOfNodes}");
-
+#endregion
 Console.ReadLine();
