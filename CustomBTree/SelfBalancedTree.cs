@@ -53,7 +53,13 @@ namespace CustomBTree
             DisplayInPreorder(root.RightTree);
         }
 
-        public void print2DUtil(Node<int> root, int space)
+        public void PrintTree(Node<int> root)
+        {
+            // Pass initial space count as 0
+            PrintTree(root, 0);
+        }
+
+        private void PrintTree(Node<int>? root, int space)
         {
             // Base case
             if (root == null)
@@ -63,7 +69,7 @@ namespace CustomBTree
             space += COUNT;
 
             // Process right child first
-            print2DUtil(root.RightTree, space);
+            PrintTree(root.RightTree, space);
 
             // Print current node after space
             // count
@@ -73,14 +79,7 @@ namespace CustomBTree
             Console.Write(root.Value + "\n");
 
             // Process left child
-            print2DUtil(root.LeftTree, space);
-        }
-
-        // Wrapper over print2DUtil()
-        public void print2D(Node<int> root)
-        {
-            // Pass initial space count as 0
-            print2DUtil(root, 0);
+            PrintTree(root.LeftTree, space);
         }
     }
 }

@@ -99,7 +99,7 @@ var sbRoot = sbTree.CreateTreeFromValues(sbTreeValues);
 Console.WriteLine("Display in preorder:");
 sbTree.DisplayInPreorder(sbRoot);
 
-sbTree.print2D(sbRoot);
+sbTree.PrintTree(sbRoot);
 
 #endregion
 Console.ReadLine();
