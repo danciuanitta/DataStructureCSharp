@@ -91,15 +91,26 @@ Console.WriteLine("Hello, World!");
 #endregion
 
 #region sbt
+//Console.ReadLine();
+//var sbTreeValues = new List<int>() { 1, 7, 2, 0, 5, 0, 0, 0, 9, 3, 0, 0, 4, 0, 6, 0, 0 };
+//var sbTree = new SelfBalancedTree<int>();
+
+//var sbRoot = sbTree.CreateTreeFromValues(sbTreeValues);
+//Console.WriteLine("Display in preorder:");
+//sbTree.DisplayInPreorder(sbRoot);
+
+//sbTree.PrintTree(sbRoot);
+
+#endregion
+
+#region bst
 Console.ReadLine();
-var sbTreeValues = new List<int>() { 1, 7, 2, 0, 5, 0, 0, 0, 9, 3, 0, 0, 4, 0, 6, 0, 0 };
-var sbTree = new SelfBalancedTree<int>();
+var values = new List<int>() { 1, 7, 2, 0, 5, 0, 0, 0, 9, 3, 0, 0, 4, 0, 6, 0, 0 };
+var bst = new BinarySearchTree();
+values.ForEach(x => bst.InsertValue(x));
 
-var sbRoot = sbTree.CreateTreeFromValues(sbTreeValues);
-Console.WriteLine("Display in preorder:");
-sbTree.DisplayInPreorder(sbRoot);
+bst.DisplayInPreorder();
 
-sbTree.PrintTree(sbRoot);
-
+bst.PrintTree();
 #endregion
 Console.ReadLine();

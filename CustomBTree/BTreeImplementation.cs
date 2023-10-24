@@ -8,7 +8,7 @@ namespace CustomBTree
         private int CurrentPostorder = 0;
         private int CurrentInorder = 0;
 
-        private Node<int> Root;
+        private Node<int>? Root;
 
         public Node<int>? CreateTreeFromList(List<int> bTreeValues)
         {
@@ -115,7 +115,7 @@ namespace CustomBTree
             return SearchValueInNodes(Root, value);
         }
 
-        private Node<int>? SearchValueInNodes(Node<int> startingNode,int value)
+        private Node<int>? SearchValueInNodes(Node<int>? startingNode,int value)
         {
             if (startingNode is null)
                 return null;
