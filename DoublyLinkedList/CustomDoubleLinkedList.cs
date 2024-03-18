@@ -30,8 +30,6 @@
                 };
 
                 count++;
-
-                return;
             }
             else if (FirstNode.NextNode is null)
             {
@@ -69,8 +67,6 @@
                 };
 
                 count++;
-
-                return;
             }
             else
             {

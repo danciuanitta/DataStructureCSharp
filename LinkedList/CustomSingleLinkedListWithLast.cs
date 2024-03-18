@@ -1,7 +1,7 @@
 ﻿
 namespace SingleLinkedList
 {
-    public class CustomSingleLinkedListWithLast<T>
+    public class CustomSingleLinkedListWithLast<T> where T: class
     {
         private LinkedListNode<T>? FirstNode;
         private LinkedListNode<T>? LastNode;
@@ -18,7 +18,7 @@ namespace SingleLinkedList
         public void Add(T value)
         {
             if (value is null)
-                throw new ArgumentNullException(nameof(T));
+                throw new ArgumentNullException(nameof(value));
 
             if (FirstNode is null)
             {
