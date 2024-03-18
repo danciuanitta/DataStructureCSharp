@@ -1,12 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace CustomBTree
 {
-    internal class SelfBalancedBinarySearchTree
+    internal class SelfBalancedBinarySearchTree<T>
     {
+        Node<T> Root;
+
+        public void Insert(T value)
+        {
+            if (Root is null)
+            {
+                Root = new Node<T>();
+                Root.Value = value;
+            }
+
+        }
     }
 }

@@ -1,11 +1,22 @@
 ﻿
-using System.Xml.Linq;
-
 namespace CustomBTree
 {
     public class SelfBalancedTree<T>
     {
         static readonly int COUNT = 10;
+        Node<T> Root;
+
+        public void Insert(T value)
+        {
+            if (Root is null)
+            {
+                Root = new Node<T>();
+                Root.Value = value;
+                Root.Depth = 0;
+                return;
+            }
+            
+        }
 
         public Node<T>? CreateTreeFromValues(List<T> treeValues)
         {
