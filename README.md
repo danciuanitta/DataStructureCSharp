@@ -28,3 +28,11 @@ Non-Linear:
 
 [Graph](https://github.com/danciuanitta/DataStructureCSharp/blob/main/CustomGraph/README.md)
 
+
+Sources:
+
+[Design gurus courses](https://www.designgurus.io/course/grokking-data-structures-for-coding-interviews)
+
+[Microsoft Learn]
+
+[Geeksforgeeks](https://www.geeksforgeeks.org/learn-data-structures-and-algorithms-dsa-tutorial/?ref=shm)
